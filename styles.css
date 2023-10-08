@@ -1,0 +1,367 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 30;
+  background-color: #fbf8f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Roboto Regular";
+}
+
+/* Main part */
+.hero {
+  display: grid;
+  width: 70%;
+  margin: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 400px;
+}
+
+.text {
+  margin: auto;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.photo {
+  margin: auto;
+}
+
+.inner-text,
+li {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 18px;
+}
+
+button {
+  font-size: 30px;
+  background-color: #4facfe;
+  display: flex !important;
+  justify-content: center;
+}
+
+.collapsible {
+  display: inline-block;
+  color: #fff;
+  background: linear-gradient(to bottom, #c2e7f6, #5da4e3);
+  font-size: 22px;
+  font-weight: 500;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: 3px solid transparent;
+  text-decoration: none;
+}
+
+.content-exp p {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 22px;
+}
+
+.content-exp h2 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 35px;
+}
+
+.skill-part {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 22px;
+}
+
+.about-text {
+  display: grid;
+}
+
+.about-text ul {
+  grid-column: 1 1;
+  grid-row: 2;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 22px;
+}
+
+/* Experience timeline block */
+.timeline {
+  position: relative;
+  max-width: 70%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: none;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  background-color: rgb(184, 169, 234);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container-exp {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container-exp::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #ff9f55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content-exp {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Collapsible */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  border: none;
+  text-align: center;
+  outline: none;
+  margin: 14px auto 0;
+  display: grid;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #e5e1ea;
+}
+
+.skill-part {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  width: 70%;
+  position: relative;
+  margin: auto;
+}
+
+/* Skills bar */
+.container-skill {
+  width: 100%;
+  background-color: #ddd;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {
+  width: 80%;
+  background-color: green;
+}
+.css {
+  width: 70%;
+  background-color: blue;
+}
+.js {
+  width: 50%;
+  background-color: red;
+}
+.python {
+  width: 90%;
+  background-color: chocolate;
+}
+.django {
+  width: 80%;
+  background-color: darkmagenta;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* For mobile devices */
+@media screen and (max-width: 978px) {
+  .hero {
+    display: flex;
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 400px;
+  }
+
+  .hello-photo img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-text {
+    padding-left: 0px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .about-text ul {
+    padding-left: 0;
+  }
+
+  .about-text li {
+    padding: 0;
+    font-size: 20px;
+  }
+
+  .timeline::after {
+    left: 31px;
+  }
+
+  .timeline {
+    max-width: 90%;
+  }
+
+  .container-exp {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  .container-exp::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  .right {
+    left: 0%;
+  }
+
+  .skill-part {
+    width: 90%;
+  }
+
+  .collapsible {
+    width: 90%;
+  }
+}
+
+.hero-box {
+  display: inline;
+  width: 100%;
+  max-width: 300px;
+  justify-self: center;
+  overflow: hidden;
+  border: 10px solid #fff;
+  background-image: linear-gradient(to right, #24aa6c 0%, #a7edf1 100%);
+  animation: ava-animate 5s infinite alternate;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-box-img {
+  animation: ava-bg 3s infinite alternate;
+}
+
+@keyframes ava-animate {
+  0% {
+    border-radius: 62% 38% 72% 28% / 67% 32% 68% 33%;
+  }
+
+  40% {
+    border-radius: 37% 63% 53% 47% / 67% 32% 68% 33%;
+  }
+
+  60% {
+    border-radius: 23% 77% 39% 61% / 78% 54% 46% 22%;
+  }
+
+  100% {
+    border-radius: 18% 82% 24% 76% / 43% 54% 46% 57%;
+  }
+}
+
+@keyframes ava-bg {
+  from {
+    backdrop-filter: hue-rotate(0);
+  }
+
+  to {
+    backdrop-filter: hue-rotate(90deg);
+  }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Resume Site</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script defer src="scripts.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main part -->
+    <div class="main-div">
+      <div class="hero hello-grid">
+        <div class="hello-text text">
+          <p style="font-size: 35px">Привет!</p>
+          <p class="inner-text">Меня зовут Сергей Кольцов</p>
+          <p class="inner-text">Я студент школы Skillfactory</p>
+        </div>
+        <div class="hero-box">
+          <img
+            class="hero-box-img"
+            src="img/foto-about.png"
+            alt="Sergey-foto"
+          />
+        </div>
+      </div>
+      <div class="hero about-grid">
+        <video
+          src="img/planet.mp4"
+          width="230"
+          height="230"
+          autoplay=""
+          loop=""
+          title="Анимация"
+        ></video>
+        <div class="about-text text" style="font-size: 18px">
+          <p style="font-size: 35px">Обо мне</p>
+          <p class="inner-text">Я родился в городе Ленинграде в 1974-м году</p>
+          <p class="inner-text">День рождения: 3 февраля</p>
+          <p class="inner-text">Мой телефон: +7 123 456 78 90</p>
+          <p class="inner-text">Мой email: mail@me.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience part -->
+    <button type="button" class="collapsible">
+      ОПЫТ<img src="img/pngwing.com.png" style="width: 1em" />
+    </button>
+    <div class="timeline scroll">
+      <div class="container-exp left">
+        <div class="content-exp">
+          <h2>октябрь 2022</h2>
+          <p>
+            Начал обучаться программированию в школе Skillfactory по программе
+            "Full-stack разработчик на Python"
+          </p>
+        </div>
+      </div>
+      <div class="container-exp right">
+        <div class="content-exp">
+          <h2>ноябрь 2022</h2>
+          <p>Начал обучаться back-end Django framework.</p>
+        </div>
+      </div>
+      <div class="container-exp left">
+        <div class="content-exp">
+          <h2>июль 2023</h2>
+          <p>
+            Окончил первый независимый проект Новостной портал — это сайт,
+            разворачиваемый в оболочке фреймворка Django.
+          </p>
+        </div>
+      </div>
+      <div class="container-exp right">
+        <div class="content-exp">
+          <h2>август 2023</h2>
+          <p>Начал обучаться front-end разработке HTML/CSS и JavaScript.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skill part -->
+    <button type="button" class="collapsible">
+      НАВЫКИ<img src="img/pngwing.com.png" style="width: 1em" />
+    </button>
+    <div class="skill-part scroll">
+      <p>HTML</p>
+      <div class="container-skill">
+        <div class="skills html">80%</div>
+      </div>
+      <p>CSS</p>
+      <div class="container-skill">
+        <div class="skills css">70%</div>
+      </div>
+      <p>JavaScript</p>
+      <div class="container-skill">
+        <div class="skills js">50%</div>
+      </div>
+      <p>Python</p>
+      <div class="container-skill">
+        <div class="skills python">90%</div>
+      </div>
+      <p>Django framework</p>
+      <div class="container-skill">
+        <div class="skills django">80%</div>
+      </div>
+    </div>
+  </body>
+</html>
