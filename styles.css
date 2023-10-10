@@ -82,13 +82,6 @@ button {
   display: grid;
 }
 
-.about-text ul {
-  grid-column: 1 1;
-  grid-row: 2;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 22px;
-}
-
 /* Experience timeline block */
 .timeline {
   position: relative;
@@ -241,7 +234,7 @@ ul {
 }
 
 /* For mobile devices */
-@media screen and (max-width: 978px) {
+@media screen and (max-width: 800px) {
   .hero {
     display: flex;
     width: 90%;
@@ -272,15 +265,6 @@ ul {
   .about-grid {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  }
-
-  .about-text ul {
-    padding-left: 0;
-  }
-
-  .about-text li {
-    padding: 0;
-    font-size: 20px;
   }
 
   .timeline::after {
@@ -332,6 +316,21 @@ ul {
   background-image: linear-gradient(to right, #24aa6c 0%, #a7edf1 100%);
   animation: ava-animate 5s infinite alternate;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-links {
+  display: flex;
+}
+
+.hero-link {
+  margin-right: 10px;
+
+  font-size: 30px;
+  color: #000;
+}
+
+.hero-link:hover {
+  color: #4facfe;
 }
 
 .hero-box-img {
